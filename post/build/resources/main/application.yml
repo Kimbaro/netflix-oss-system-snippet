@@ -2,7 +2,7 @@
 
 spring:
   application:
-    name: test1
+    name: post
 
 # -- Eureka client
 #  defaultZone = eureka server ip:port ??? ????.
