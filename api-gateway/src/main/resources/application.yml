@@ -1,0 +1,28 @@
+# -- Eureka client
+#  defaultZone = eureka server ip:port ??? ????.
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URL:http://127.0.0.1:8888/eureka/}
+server:
+  port: 8880
+
+# -- Cloud configuration
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: user
+          uri: http://localhost:8883
+          predicates:
+            - Path=/user/**
+        - id: post
+          uri: http://localhost:8882
+          predicates:
+            - Path=/post/**
+        - id: comment
+          uri: http://localhost:8881
+          predicates:
+            - Path=/comment/**

@@ -1,0 +1,14 @@
+GET http://localhost:8880/user/1
+Accept: application/json
+
+###
+
+GET http://localhost:8880/post/1
+Accept: application/json
+
+###
+
+GET http://localhost:8880/comment/1
+Accept: application/json
+
+###
