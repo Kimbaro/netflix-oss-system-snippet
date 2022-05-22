@@ -1,2 +1,14 @@
+# -- Default spring configuration
+
+spring:
+  application:
+    name: user
+
+# -- Eureka client
+#  defaultZone = eureka server ip:port ??? ????.
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URL:http://127.0.0.1:8888/eureka/}
 server:
-  port: 8881
+  port: 8883
